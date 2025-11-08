@@ -38,6 +38,8 @@ console.log("js connected");
    const newP3=document.createElement('p');
    newP1.innerText=p1.innerText;
    newP2.innerText=p2.innerText;
+   newP1.style.fontWeight='bold';
+   newP2.style.fontWeight='bold';
        const date=new Date().toLocaleTimeString();
        newP3.innerText=date;
    
@@ -54,9 +56,9 @@ console.log("js connected");
      div2.style.justifyContent='space-between';
       div2.style.alignItems='center';
       div2.style.borderRadius='12px';
-      div2.style.padding='5px'
+      div2.style.padding='5px';
       div2.style.marginTop='10px';
-      div2.style.border='2px lightgrey solid'
+      div2.style.border='2px lightgrey solid';
      
     div2.style.backgroundColor='#fafafa';
     const callHistory= document.getElementById(id3);
@@ -71,6 +73,68 @@ console.log("js connected");
          e.preventDefault();
          getNameAndNum('emergency','em-num','history');
  });
+
+ const call1=document.getElementById("call-police");
+ call1.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('police','police-num','history');
+ });
+
+ const call2=document.getElementById("call-fire");
+ call2.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('fire','fire-num','history');
+ });
+
+
+ const call3=document.getElementById("women-call");
+ call3.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('women','women-num','history');
+ });
+
+
+ const call4=document.getElementById("anti-call");
+ call4.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('anti','anti-num','history');
+ });
+
+
+ const call5=document.getElementById("Electricity-call");
+ call5.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('Electricity','Electricity-num','history');
+ });
+
+
+ const call6=document.getElementById("ambulance-call");
+ call6.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('ambulance','ambulance-num','history');
+ });
+
+
+ const call7=document.getElementById("brac-call");
+ call7.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('brac','brac-num','history');
+ });
+
+
+ const call8=document.getElementById("railway-call");
+ call8.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('railway','railway-num','history');
+ });
+
+
+
+
+
+
+
+ 
 
 
   
