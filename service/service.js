@@ -21,17 +21,60 @@ console.log("js connected");
 
 //  call section
 
-  const calls=document.getElementsByClassName("call-btn");
-  for(const call of calls)
-  {
-    call.addEventListener("click",function(){
-        
-        const name=document.getElementsByClassName("name");
-        const num=document.getElementsByClassName("num");
-               
-        for()
+  function getNameAndNum(id1,id2,id3){
 
-    })
-  }
+    const p1=document.getElementById(id1);
+    const p2=document.getElementById(id2);
+    
+    
+    alert("Calling "+p1.innerText+" "+
+       p2.innerText);
+    const taka=document.getElementById("taka");
+    const pre=taka.innerText;
+    const post =parseInt(pre)-20;
+    taka.innerText=post;
+   const newP1=document.createElement('p');
+   const newP2=document.createElement('p');
+   const newP3=document.createElement('p');
+   newP1.innerText=p1.innerText;
+   newP2.innerText=p2.innerText;
+       const date=new Date().toLocaleTimeString();
+       newP3.innerText=date;
+   
+    const div=document.createElement('div');
+    const div1=document.createElement('div');
+    const div2=document.createElement('div');
+
+    div.appendChild(newP1);
+    div.appendChild(newP2);
+    div1.appendChild(newP3);
+    div2.appendChild(div);
+    div2.appendChild(div1);
+    div2.style.display='flex';
+     div2.style.justifyContent='space-between';
+      div2.style.alignItems='center';
+      div2.style.borderRadius='12px';
+      div2.style.padding='5px'
+      div2.style.marginTop='10px';
+      div2.style.border='2px lightgrey solid'
+     
+    div2.style.backgroundColor='#fafafa';
+    const callHistory= document.getElementById(id3);
+    console.log(callHistory);
+    callHistory.appendChild(div2);
+
+}
+
+  
+ const call=document.getElementById("call-emergency");
+ call.addEventListener('click',function(e){
+         e.preventDefault();
+         getNameAndNum('emergency','em-num','history');
+ });
+
+
+  
+
+
 
 
