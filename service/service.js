@@ -59,10 +59,11 @@ console.log("js connected");
       div2.style.padding='5px';
       div2.style.marginTop='10px';
       div2.style.border='2px lightgrey solid';
+      div2.className="new-div";
      
     div2.style.backgroundColor='#fafafa';
     const callHistory= document.getElementById(id3);
-    console.log(callHistory);
+    
     callHistory.appendChild(div2);
 
 }
@@ -129,12 +130,28 @@ console.log("js connected");
  });
 
 
+//  clear button
+
+  const clr=document.getElementById("clear-btn");
+  clr.addEventListener('click',function(e){
+        
+       const div=document.getElementById('history');
+       const child=Array.from(div.getElementsByClassName('new-div'));
+       console.log(child);
+       for(const i of child)
+       {
+         div.removeChild(i);
+       }
+  })
 
 
 
 
 
- 
+
+
+
+
 
 
   
