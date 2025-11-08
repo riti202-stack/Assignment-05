@@ -27,12 +27,19 @@ console.log("js connected");
     const p2=document.getElementById(id2);
     
     
-    alert("Calling "+p1.innerText+" "+
-       p2.innerText);
+    
     const taka=document.getElementById("taka");
     const pre=taka.innerText;
     const post =parseInt(pre)-20;
+    if(post<0) 
+      {
+         alert("Not enough coin to call!!")
+         return;
+      }
+
     taka.innerText=post;
+    alert("Calling "+p1.innerText+" "+
+       p2.innerText);
    const newP1=document.createElement('p');
    const newP2=document.createElement('p');
    const newP3=document.createElement('p');
